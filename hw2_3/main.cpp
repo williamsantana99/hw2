@@ -33,7 +33,8 @@ int main(void)
           aout = 0.9*i; 
           int index = sample * (1-i);
           ThisThread::sleep_for(1ms);
-          data[index] = 3.3 * aout;    
+          data[index] = 3.3 * aout; 
+          print(data, sample);   
       }
   }  
   //////////////////////////////////////////////////////
@@ -41,9 +42,8 @@ int main(void)
   //uLCD.text_width(4); //4X size text
   //uLCD.text_height(4);
   //uLCD.locate(1,2);
-  //uLCD.printf("%3d",s);   
-  
-  print(data[], sample);
+  //uLCD.printf("%3d",s);  
+    
 }
 
 void print(float data[], int sample){
