@@ -17,7 +17,7 @@ int main(void)
   float data[sample]; 
   int a=0;
 
-  while(a<100){      
+  while(a<100000){      
             
     for (int i=0; i<sample; i++){     
           aout = 1.0-float(i*1.0/sample*1.0);                   
@@ -29,12 +29,12 @@ int main(void)
    }  
   
   /////////////////////////////////////////////////////////
-  for(int i=0; i<sample; i++){
-        printf("%f\r\n", data[i]);
-        //ThisThread::sleep_for(1ms);
-  }      
+  while(a<100000){
+      for(int i=0; i<sample; i++){
+        printf("%f\r\n", data[i]);            
+      } 
+  }   
   
-
   //////////////////////////////////////////////////////
   
  }
